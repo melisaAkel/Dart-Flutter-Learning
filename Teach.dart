@@ -10,6 +10,8 @@ void main() {
   int numberrr = 12;
   double doubledNum = 12.5;
   String namee = "Melisa";
+
+  print("are u okay with me?");
   int melisaLen = name.length; //length methods
   bool isTrue = true;
   print(name);
