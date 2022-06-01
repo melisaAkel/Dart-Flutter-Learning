@@ -8,6 +8,7 @@ void main() {
   num numberr = 12;
   num numbered = 12.5; //this is bigger than double
   int numberrr = 12;
+  print("mamamamma");
   double doubledNum = 12.5;
   String namee = "Melisa";
 
