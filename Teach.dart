@@ -21,7 +21,7 @@ void main() {
   stdout.write("will not go to next line");
   stdout.write("will not go to next line");
   stdout.write("will not go to next line \n");
-
+  print("numbersssss");
   //print("this will give error: " + (numberrr + numberrr));
 
 /*  void printInt(int aNum) {
