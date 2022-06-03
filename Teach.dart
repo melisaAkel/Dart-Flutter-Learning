@@ -11,13 +11,6 @@ void main() {
   print("mamamamma");
   double doubledNum = 12.5;
   String namee = "Melisa";
-<<<<<<< HEAD
-=======
-
-  print("please take it");
-  print("who are you?");
-  print("are u okay with me?");
->>>>>>> main
   int melisaLen = name.length; //length methods
   bool isTrue = true;
   print(name);

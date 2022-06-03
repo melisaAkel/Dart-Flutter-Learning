@@ -18,4 +18,32 @@ void main() {
   print(moneys);
   moneys.clear(); //to clear the list
   print(moneys);
+  List<double> costumerMoney = List.generate(100, (index) {
+    return index + 5.7;
+  });
+  print(costumerMoney);
+  List<int> moneyOn = [0, 50, 100];
+  for (int i = 0; i < moneyOn.length; i++) {
+    print("money of costumer $i : ${moneyOn[i]}");
+  }
+  for (var item in moneyOn) {
+    //iten is elements of the money list
+    print(item);
+  }
+  print(moneys.contains(12));
+  for (int item in moneyOn) {
+    //iten is elements of the money list
+    print(item);
+  }
+}
+
+void methodName(/* parametrs */) {
+  //write your code
+}
+int returnTypeOfFunctionForInt() {
+  return 0; //return something
+}
+
+String returnTypeOfFunctionForString(int k, int y, String b) {
+  return "String"; //return something
 }
