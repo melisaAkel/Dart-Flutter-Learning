@@ -35,6 +35,32 @@ void main() {
     //iten is elements of the money list
     print(item);
   }
+  Map<String, int> users = {"ahmet": 20, "veli": 12};
+  print("Ahmet's money : ${users["ahmet"]}");
+  for (var item in users
+      .keys) //keys are the first ones in our case names. Values are second one in our case it is int
+  {
+    print(
+        "${item} - ${users[item]}"); //second one will give the value it is similar with saying users["ahmet"];
+  }
+  for (int i = 0; i < users.length; i++) {
+    print("${users.keys.elementAt(i)} -- ${users.values.elementAt(i)}");
+  }
+  Map<String, List<int>> vbBank = {
+    //when i want to map with a list first initizlizing
+    "ahmet": [100, 200, 300],
+    "fatma": [7, 8, 9]
+  };
+
+  vbBank["mehmet"] = [30, 50]; //after adding new keys and lists
+  vbBank["veli"] = [30];
+  for (var item in vbBank.keys) {
+    //items are keys for our list and vbBank[item] is a list
+    for (var money in vbBank[item]!) {
+      //we are looking inside of every list using our keys
+      print(money);
+    }
+  }
 }
 
 void methodName(/* parametrs */) {
