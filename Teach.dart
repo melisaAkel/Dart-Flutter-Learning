@@ -11,9 +11,6 @@ void main() {
   print("mamamamma");
   double doubledNum = 12.5;
   String namee = "Melisa";
-  print("please take it");
-  print("who are you?");
-  print("are u okay with me?");
   int melisaLen = name.length; //length methods
   bool isTrue = true;
   print(name);
@@ -54,12 +51,6 @@ void main() {
       print(
           "None of them is true so i am the one who will be printed since number is : $number");
   }
-
-  List<int> moneys = [10, 15, 20]; //index are starting from the 0
-  print("first person money is: ${moneys[0]}"); //it will give the desired index
-
-  print(
-      "first person money is: $moneys[0]"); //we cannot print in this form it will give whole list
 }
 
 void printInt(int aNum) {
