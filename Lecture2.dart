@@ -1,5 +1,6 @@
 void main() {
   List<int> moneys = [10, 15, 20]; //index are starting from the 0
+  List<String> names = ["ahsan", "melisa"]; // for string list
   print("first person money is: ${moneys[0]}"); //it will give the desired index
 
   print(
