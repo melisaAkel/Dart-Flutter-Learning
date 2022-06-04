@@ -6,9 +6,10 @@ void main() {
       "first person money is: $moneys[0]"); //we cannot print in this form it will give whole list
   int k = moneys.length;
   print(k);
-  moneys.reversed; //it makes it iterator
+  moneys.reversed; //it makes it iterator and it didnt change our original list
   //moneys.reversed.toList()  -> this will make it again list(but it is a new list not ours so when we use a method of list our list will not change) and we will be able to use list features again
-  print("I reversed orginal list : $moneys");
+  print("I reversed orginal list : ${moneys.reversed}");
+  moneys = moneys.reversed.toList();
   moneys.reversed.toList();
   print("Nothing happened to me because new list revesed not me : $moneys");
   moneys.insert(2, 999999); //set method in java
@@ -27,25 +28,27 @@ void main() {
     print("money of costumer $i : ${moneyOn[i]}");
   }
   for (var item in moneyOn) {
-    //iten is elements of the money list
+    //item is elements of the money list
     print(item);
   }
   print(moneys.contains(12));
   for (int item in moneyOn) {
-    //iten is elements of the money list
+    //item is elements of the money list
     print(item);
   }
   Map<String, int> users = {"ahmet": 20, "veli": 12};
+  users["ahmet"] = 15;
+  users["ahsan"] = 10;
   print("Ahmet's money : ${users["ahmet"]}");
-  for (var item in users
-      .keys) //keys are the first ones in our case names. Values are second one in our case it is int
+  for (var item in users.keys) //keys are the first ones in our case names.
+  //Values are second one in our case it is int
   {
     print(
         "${item} - ${users[item]}"); //second one will give the value it is similar with saying users["ahmet"];
   }
-  for (int i = 0; i < users.length; i++) {
+  /*  for (int i = 0; i < users.length; i++) {
     print("${users.keys.elementAt(i)} -- ${users.values.elementAt(i)}");
-  }
+  } */
   Map<String, List<int>> vbBank = {
     //when i want to map with a list first initizlizing
     "ahmet": [100, 200, 300],
@@ -61,6 +64,7 @@ void main() {
       print(money);
     }
   }
+  print(listMethod());
 }
 
 void methodName(/* parametrs */) {
@@ -72,4 +76,8 @@ int returnTypeOfFunctionForInt() {
 
 String returnTypeOfFunctionForString(int k, int y, String b) {
   return "String"; //return something
+}
+
+List<int> listMethod() {
+  return List.generate(12, (index) => index + 1);
 }
