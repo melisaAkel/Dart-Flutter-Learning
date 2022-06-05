@@ -14,12 +14,13 @@ void main() {
   if (iWantItNull == null) {
     print("it is null");
   } else {
-    print(iWantItNull + 10);
+    print(iWantItNull! + 10);
   }
   List<int?> listCanBeAlsoNull = [null, 10, 50, null];
-  bool checkNull = iWantItNull == null ? false : true;
-  //if the condition is true it will return false(the first one in this case it is false)
-  print(checkNull); //it gave false
+  bool checkNull = iWantItNull != null ? true : false;
+  if (iWantItNull != null)
+    //if the condition is true it will return false(the first one in this case it is false)
+    print(checkNull); //it gave false
 
   print("----------------" * 10);
   //creating a object
@@ -55,6 +56,26 @@ class User {
     this.city = city;
     this.age = age;
     this.favoriteColor = favoriteColor;
+    this.userCode = (favoriteColor ?? 'red') +
+        name; //if favorite color is null it will initiliaze as red deafault
+  }
+}
+
+class User2 {
+  //when we write our properities we need to use final but to initiliaze in our constructer
+  //we should first say them late otherwise it will give error message
+  final String name;
+  final int money;
+  final String city;
+  final int? age;
+  final String? favoriteColor;
+  late final String userCode;
+  late final _userId;
+  User2(this.name, this.money, this.city,
+      {required int userId, this.age, this.favoriteColor}) {
+    //when u said required it must initiliaze
+    //similar with java
+    this._userId = userId; // _ this makes it private
     this.userCode = (favoriteColor ?? 'red') +
         name; //if favorite color is null it will initiliaze as red deafault
   }
