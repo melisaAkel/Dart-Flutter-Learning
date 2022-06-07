@@ -16,11 +16,4 @@ class User2 {
     this.userCode = (favoriteColor ?? 'red') +
         name; //if favorite color is null it will initiliaze as red deafault
   }
-  //this two methods are doing the same job when we dont have anything in paranthesis we can use this notation
-  bool isIdEmpty() {
-    return _userId.isEmpty;
-  }
-
-  bool isIDEmpty() => _userId.isEmpty;
-  //i meant this paranthesis
 }
