@@ -47,5 +47,9 @@ class User2 {
   bool get isIDDEmpty =>
       _userId.isEmpty; //since pharanthesis is also empty we can use like this
   //when we want to use in our code we will just do object.isIDDEmpty;
-
+  static int justGive3() => 3;
+  var random = new Random();
+  double k =
+      Random().nextDouble(); //thats how you create a random double 0-1 range
+  void justPrintSomething() => print(k);
 }
