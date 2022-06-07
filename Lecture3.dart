@@ -43,7 +43,8 @@ int? methodCanBeAlsoNull(int? parameter) {
 class User {
   //when we write our properities we need to use final but to initiliaze in our constructer
   //we should first say them late otherwise it will give error message
-  late final String name;
+  late final String
+      name; //if you will change anything later you shouldnt say final you should just say late
   late final int money;
   late final String city;
   late final int? age;
