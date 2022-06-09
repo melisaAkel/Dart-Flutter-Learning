@@ -1,4 +1,4 @@
-import 'user2.dart'; //i dont have User2 class inside of this file however i have in other file im dart to use that object i should import the file
+import 'User2.dart'; //i dont have User2 class inside of this file however i have in other file im dart to use that object i should import the file
 //which initliaze that object.
 
 void main() {
