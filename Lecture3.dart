@@ -37,6 +37,7 @@ void main() {
       User2("user2", 123456789, "city", userId: 1); //userId must initiliaze
   //accessing properities
   print(user1.name);
+  print(User2.justGive3());
 }
 
 int? methodCanBeAlsoNull(int? parameter) {
@@ -46,17 +47,17 @@ int? methodCanBeAlsoNull(int? parameter) {
 class User {
   //when we write our properities we need to use final but to initiliaze in our constructer
   //we should first say them late otherwise it will give error message
-  late final String
+  late String
       name; //if you will change anything later you shouldnt say final you should just say late
-  late final int money;
+  late final int _money;
   late final String city;
   late final int? age;
-  late final String? favoriteColor;
+  late String? favoriteColor;
   late final String userCode;
   User(String name, int money, String city, {int? age, String? favoriteColor}) {
     //similar with java
     this.name = name;
-    this.money = money;
+    this._money = money;
     this.city = city;
     this.age = age;
     this.favoriteColor = favoriteColor;

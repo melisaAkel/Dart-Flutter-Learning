@@ -11,9 +11,10 @@ class User2 {
   final int? age;
   final String? favoriteColor;
   late final String userCode;
+
   late final _userId;
   User2(this.name, this.money, this.city,
-      {required int userId, this.age, this.favoriteColor}) {
+      {required var userId, this.age, this.favoriteColor}) {
     //when u said required it must initiliaze
     //similar with java
     this._userId = userId; // _ this makes it private
@@ -22,8 +23,8 @@ class User2 {
   }
   //getters and setters
   String get getName => this.name;
-
   set setName(String name) => this.name = name;
+
   int get getMoney => this.money;
 
   set setMoney(int? money) {
@@ -46,10 +47,15 @@ class User2 {
   //i meant this paranthesis
   bool get isIDDEmpty =>
       _userId.isEmpty; //since pharanthesis is also empty we can use like this
+  //User2 user = User2(......);
   //when we want to use in our code we will just do object.isIDDEmpty;
+  //
   static int justGive3() => 3;
-  var random = new Random();
-  double k =
-      Random().nextDouble(); //thats how you create a random double 0-1 range
-  void justPrintSomething() => print(k);
+  //public static int justGive3()
+  //{}
+  void justPrintSomething() => print(3);
+
+  void isblabla() {
+    print("bla bla bla");
+  }
 }
