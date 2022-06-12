@@ -1,6 +1,7 @@
 //                  EXTENDS AND ABSTRACT CLASSES
 
 abstract class IUser {
+  //PARENTS CLASS
   //this is a visiual class which doesnt exist however
 // when we want everything in subclass we created this kind of visiual classes as parent class
   String name;
@@ -15,8 +16,15 @@ abstract class IUser {
 
 class User extends IUser {
   int bankMoney;
+  //User a = User("melisa",10,10);
   User(String name, int money, this.bankMoney)
       : super(name, money); //we call super
+
+  void sayYourNameAndMoney() {
+    //override
+    super.sayYourNameAndMoney();
+    print("aaaa");
+  }
 }
 
 class BankUser extends User {
@@ -30,9 +38,7 @@ abstract class IUStudents {
   String name;
   int ID;
   IUStudents(this.name, this.ID);
-  void printID() {
-    print(this.ID);
-  }
+  void printID();
 }
 
 class Students implements IUStudents {
@@ -56,7 +62,7 @@ class Students implements IUStudents {
 void main() {
   //we can use enums for grouping and switch cases
   final customerMouse = Mouses.magic;
-  print(customerMouse.index);
+  print(customerMouse.index); //0
   print(customerMouse.name);
   //down to is same
   if (customerMouse.name == "apple") {
@@ -80,6 +86,8 @@ void main() {
       // TODO: Handle this case.
       break;
   }
+  User a = User("melisa", 10, 10);
+  a.sayYourNameAndMoney();
 }
 
 enum Mouses {
