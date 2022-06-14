@@ -12,6 +12,7 @@ class Cat {
   }
 
   String toString() {
+    //like java toString
     return "$speed";
   }
 }
