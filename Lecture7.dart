@@ -11,6 +11,10 @@ class Cat {
     return object is Cat && this.speed == object.speed;
   }
 
+  void changeName(String name) {
+    this.name = name;
+  }
+
   String toString() {
     //like java toString
     return "$speed";
