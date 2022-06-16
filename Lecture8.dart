@@ -24,3 +24,7 @@ mixin BankMixin {
     print(money);
   }
 }
+void main(List<String> args) {
+  Bank a = Bank("Vb", 100);
+  a.sayBankHello();
+}

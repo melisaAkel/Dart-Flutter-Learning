@@ -13,4 +13,5 @@ void main() {
   print(k);
   Product.callHelloWorld();
   //Product.money we can not use like this we should create a object of product
+  //Product a = Product("name", "brand");
 }

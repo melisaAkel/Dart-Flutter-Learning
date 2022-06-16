@@ -1,7 +1,9 @@
 class Cat {
   String name;
   int speed;
-  Cat(this.name, this.speed);
+  int age;
+  String breed;
+  Cat(this.name, this.speed, this.age, this.breed);
 
   int operator +(Cat otherCat) {
     return this.speed + otherCat.speed;
@@ -15,15 +17,19 @@ class Cat {
     this.name = name;
   }
 
+  void changeBreed(String name) {
+    this.breed = name;
+  }
+
   String toString() {
     //like java toString
-    return "$speed";
+    return "the cat name is $name and the cat speed is $speed and the cat age is $age and the cat breed is $breed";
   }
 }
 
 void main(List<String> args) {
-  Cat tekir = Cat("tekir", 15);
-  Cat vanCat = Cat("van cat", 15);
+  Cat tekir = Cat("tekir", 15, 10, "breed1");
+  Cat vanCat = Cat("van cat", 15, 10, "breed2");
   print(tekir + vanCat);
   print(tekir);
   print(tekir == vanCat);

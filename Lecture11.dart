@@ -7,7 +7,7 @@ class User {
 class Product {
   String name;
   Product(this.name);
-  //ı have one user i will use this to override constructer it will make the product name user's name
+  //I have one user i will use this to override constructer it will make the product name user's name
   factory Product.fromUser(User user) {
     //this is overriding constructer
     return Product(
